@@ -2,3 +2,23 @@ slack:
   token: xoxb-5151905627683-5145428813366-bL7roIbiH34VnnDQkPJu0hFy
   channel:
     monitor: '#schedule-bot'
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/schedule
+    username: root
+    password: 28782821
