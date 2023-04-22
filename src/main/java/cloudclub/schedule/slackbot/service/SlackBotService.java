@@ -38,15 +38,15 @@ public class SlackBotService {
         // Slack 메세지 보내기
         try{
             List<TextObject> textObjects = new ArrayList<>();
-            textObjects.add(markdownText("*일정 제목:*\n" + scheduleDto.getName()));
-            textObjects.add(markdownText("*일정 내용:*\n" + scheduleDto.getTitle()));
-            textObjects.add(markdownText("*일정 일자:*\n" + scheduleDto.getContent()));
+            textObjects.add(markdownText("*일정 날짜:*\n" + scheduleDto.getScheduleDate()));
+            textObjects.add(markdownText("*일정 제목:*\n" + scheduleDto.getTitle()));
+            textObjects.add(markdownText("*일정 내용:*\n" + scheduleDto.getContent()));
 
             MethodsClient methods = Slack.getInstance().methods(token);
             ChatPostMessageRequest request = ChatPostMessageRequest.builder()
                     .channel(channel)
                     .blocks(asBlocks(
-                            header(header -> header.text(plainText( scheduleDto.getName() + "님이 일정을 추가하셨습니다!"))),
+                            header(header -> header.text(plainText( scheduleDto.getTitle() + " 일정이 추가됐습니다!"))),
                             divider(),
                             section(section -> section.fields(textObjects)
                             ))).build();

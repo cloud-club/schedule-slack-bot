@@ -1,5 +1,7 @@
 package cloudclub.schedule.slackbot.entity;
 
+import lombok.Getter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +9,7 @@ import javax.persistence.Id;
 import java.time.LocalDate;
 
 @Entity
+@Getter
 public class Schedule {
 
   @Id
