@@ -1,5 +1,5 @@
 slack:
-  token: xoxb-5151905627683-5145428813366-bL7roIbiH34VnnDQkPJu0hFy
+  token: xoxb-5151905627683-5145428813366-e0sD2TwJVSC7swY7gcMF5Ygo
   channel:
     monitor: '#schedule-bot'
 
@@ -19,6 +19,6 @@ spring:
         format_sql: true
         show-sql: true
   datasource:
-    url: jdbc:mysql://localhost:3306/schedule
+    url: jdbc:mysql://34.70.124.200:3306/schedule?useSSL=false
     username: root
-    password: 28782821
+    password: password

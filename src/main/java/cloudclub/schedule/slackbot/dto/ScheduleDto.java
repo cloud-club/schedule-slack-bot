@@ -12,6 +12,12 @@ public class ScheduleDto {
     private String title;
     private String content;
 
+    public ScheduleDto(LocalDate scheduleDate, String title, String content) {
+        this.scheduleDate = scheduleDate;
+        this.title = title;
+        this.content = content;
+    }
+
     @Builder
     public ScheduleDto(Schedule schedule) {
         this.scheduleDate = schedule.getSchedule_date();
