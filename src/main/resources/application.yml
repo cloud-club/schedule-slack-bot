@@ -1,4 +1,4 @@
 slack:
-  token: xoxb-5151905627683-5145428813366-w9zF0JUTrMnKjt8v2lpmABQ1
+  token: xoxb-5151905627683-5145428813366-bL7roIbiH34VnnDQkPJu0hFy
   channel:
-    monitor: 'schedule-bot'
+    monitor: '#schedule-bot'
