@@ -1,5 +1,5 @@
 slack:
-  token: xoxb-5151905627683-5145428813366-e0sD2TwJVSC7swY7gcMF5Ygo
+  token: token
   channel:
     monitor: '#schedule-bot'
 
@@ -13,7 +13,7 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         format_sql: true

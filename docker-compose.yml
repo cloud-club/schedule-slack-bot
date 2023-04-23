@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+
+  server:
+    container_name: slack-bot
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://34.70.124.200:3306/schedule?useSSL=false
+      SPRING_DATASOURCE_USERNAME: "root"
+      SPRING_DATASOURCE_PASSWORD: "password"
+      SLACK_TOKEN: ""
