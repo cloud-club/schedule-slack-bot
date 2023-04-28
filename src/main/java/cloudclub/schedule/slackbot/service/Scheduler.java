@@ -18,7 +18,7 @@ public class Scheduler {
   private final ScheduleJpaRepository scheduleJpaRepository;
   private final SlackBotService slackBotService;
 
-  @Scheduled(cron = "* * 9 * * *")
+  @Scheduled(cron = "0 0 0 * * *")
   public void findSchedules() {
     List<Schedule> schedules = scheduleJpaRepository.findSchedules(LocalDate.now());
 

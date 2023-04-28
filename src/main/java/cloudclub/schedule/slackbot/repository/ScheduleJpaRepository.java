@@ -12,7 +12,7 @@ public interface ScheduleJpaRepository extends JpaRepository<Schedule, Long> {
 
   @Query(value = """
     select *
-    from Schedule s
+    from schedule s
     where s.remind_date = :remindDate
   """, nativeQuery=true)
   List<Schedule> findSchedules(@Param("remindDate") LocalDate remindDate);
